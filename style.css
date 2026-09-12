@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root{
+  --green:#062d28;
+  --green2:#0a3933;
+  --gold:#dca53e;
+  --gold2:#f0c66a;
+  --cream:#f7f5ef;
+  --ink:#172326;
+  --white:#fff;
+  --muted:#647174;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:var(--cream)}
+.container{width:min(1350px,92%);margin:auto}
+.site-header{position:absolute;z-index:10;top:0;left:0;right:0;color:#fff}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;min-width:275px}
+.brand-mark{font-size:44px;line-height:.5;transform:rotate(-7deg);display:block}
+.brand strong{display:block;font-size:20px;letter-spacing:1px}
+.brand strong b{color:var(--gold2)}
+.brand small{font-size:10px;letter-spacing:.8px}
+.main-nav{display:flex;gap:34px;align-items:center}
+.main-nav a{color:#fff;text-decoration:none;font-size:13px;opacity:.95;padding:28px 0 20px;border-bottom:2px solid transparent}
+.main-nav a.active{color:var(--gold2);border-color:var(--gold2)}
+.nav-actions{display:flex;align-items:center;gap:12px;font-size:12px}
+.nav-icon{font-size:23px}
+.user-icon{border:1px solid #fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:22px}
+.gold-btn,.search-btn{border:0;background:linear-gradient(135deg,#e4b24f,#c98d27);color:#fff;border-radius:8px;padding:12px 22px;font-weight:700;cursor:pointer}
+.gold-btn.small{border-radius:20px;padding:9px 20px}
+.hero{min-height:500px;height:500px;position:relative;color:#fff;background:
+linear-gradient(90deg,rgba(3,31,28,.97) 0%,rgba(3,31,28,.72) 29%,rgba(3,31,28,.08) 65%,rgba(3,31,28,.42) 100%),
+url("https://images.squarespace-cdn.com/content/v1/69691e9b429b8764cf5b0f29/0e6e9298-517a-4983-99cc-a4dee4eb4b84/white-suv-winding-road-kigali-rwanda-terraced-hills-sunset.jpg") center/cover;
+overflow:visible}
+.hero:after{content:"";position:absolute;right:0;top:0;bottom:0;width:32px;background:repeating-linear-gradient(135deg,#d6a13a 0 4px,#173e39 4px 12px);opacity:.85}
+.hero-content{position:relative;height:100%;padding-top:115px;display:flex;justify-content:space-between}
+.hero-copy{max-width:470px}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.4px;display:flex;align-items:center;gap:13px}
+.eyebrow span{display:block;width:29px;height:3px;background:var(--gold2)}
+.hero h1{font-family:"Playfair Display",serif;font-size:51px;line-height:.97;margin:12px 0 10px;font-style:italic}
+.hero h1 em{color:var(--gold2);font-weight:600}
+.hero-copy>p{font-size:15px;line-height:1.5}
+blockquote{margin:18px 0 0;position:relative;padding-left:27px;font-family:"Playfair Display",serif}
+blockquote>span{position:absolute;left:0;top:-8px;color:var(--gold2);font-size:44px;font-weight:700}
+blockquote strong{font-size:15px;line-height:1.55}
+blockquote small{display:block;font-family:"DM Sans";margin-top:4px;color:var(--gold2)}
+.hero-quote{align-self:flex-end;margin:0 75px 65px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:22px;line-height:1.05}
+.hero-quote span{color:var(--gold2);font-size:45px}
+.hero-quote strong{display:block}
+.hero-quote small{font:12px "DM Sans";display:block;margin-top:10px}
+.booking-wrap{position:absolute;left:50%;transform:translateX(-50%);bottom:-35px;z-index:5}
+.booking-bar{background:#fff;border-radius:13px;padding:11px 13px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1.1fr;gap:8px;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.booking-field{height:52px;border:1px solid #e6e9e7;border-radius:7px;display:flex;align-items:center;padding:0 12px;gap:10px;color:#203033}
+.booking-field .field-icon{font-size:21px}
+.booking-field span:nth-child(2){flex:1}
+.booking-field small{display:block;font-size:9px;font-weight:700}
+.booking-field b{display:block;font-size:11px;font-weight:500;margin-top:3px;white-space:nowrap}
+.booking-field input,.booking-field select{border:0;background:transparent;font:inherit;color:#405155;outline:none;width:100%}
+.booking-field i{font-style:normal}
+.search-btn{height:52px;border-radius:7px;font-size:12px}
+.trust-strip{background:#062e29;color:#fff;padding:54px 0 27px}
+.trust-grid{display:grid;grid-template-columns:repeat(5,1fr) 1.1fr;align-items:center}
+.trust-item{display:flex;gap:12px;align-items:center;border-right:1px solid rgba(255,255,255,.3);padding:0 25px}
+.trust-item:first-child{padding-left:0}
+.trust-item>span{border:2px solid var(--gold);color:var(--gold);border-radius:50%;width:42px;height:42px;display:grid;place-items:center;font-size:22px}
+.trust-item b{display:block;font-size:12px;margin-bottom:5px}
+.trust-item small{display:block;font-size:9px;line-height:1.5;color:#dce6e3}
+.mini-landscape{height:80px;background:linear-gradient(90deg,rgba(6,46,41,.35),rgba(6,46,41,.1)),url("https://images.squarespace-cdn.com/content/v1/69691e9b429b8764cf5b0f29/0e6e9298-517a-4983-99cc-a4dee4eb4b84/white-suv-winding-road-kigali-rwanda-terraced-hills-sunset.jpg") center/cover;display:flex;align-items:center;padding-left:26px}
+.mini-landscape b{display:block;font:italic 24px "Playfair Display"}
+.mini-landscape span{font-size:11px}
+.fleet-section{background:#faf9f5;padding:33px 0 25px}
+.fleet-layout{display:grid;grid-template-columns:270px 1fr 245px;gap:12px;align-items:stretch}
+.eyebrow.dark{color:#3b4c4d;font-size:9px}
+.eyebrow.dark span{background:#d89f35}
+.fleet-intro h2{font:italic 34px "Playfair Display";margin:10px 0}
+.fleet-intro p{font-size:11px;line-height:1.7;color:#45585b}
+.fleet-intro .gold-btn{margin-top:6px;font-size:10px}
+.fleet-intro blockquote{color:#193c38;margin-top:28px;padding-left:0}
+.fleet-intro blockquote:before{display:none}
+.mountain-line{color:#dda53b;font-size:38px;margin-top:25px}
+.cars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.car-card{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 2px 9px rgba(0,0,0,.08)}
+.car-card img{display:block;width:100%;height:143px;object-fit:cover}
+.card-body{padding:10px 11px}
+.card-body h3{font-size:11px;margin:0 0 5px}
+.card-body p{font-size:8.5px;color:#687678;min-height:25px;margin:0 0 9px}
+.card-body>div{display:flex;align-items:center;justify-content:space-between;font-size:9px}
+.card-body>div span{width:27px;height:27px;border-radius:50%;background:#f9e5bf;display:grid;place-items:center;font-size:17px}
+.fleet-promo{background:linear-gradient(180deg,rgba(0,45,39,.1),rgba(0,45,39,.25)),url("https://images.squarespace-cdn.com/content/v1/69691e9b429b8764cf5b0f29/0e6e9298-517a-4983-99cc-a4dee4eb4b84/white-suv-winding-road-kigali-rwanda-terraced-hills-sunset.jpg") center/cover;min-height:270px;color:#fff;display:flex;align-items:flex-end;padding:25px 21px}
+.fleet-promo span{font:italic 20px "Playfair Display";line-height:1.2}
+.fleet-promo small{display:block;margin:8px 0 20px;font-size:10px}
+.fleet-promo .gold-btn{font-size:10px}
+.dark-bottom{background:linear-gradient(90deg,rgba(2,39,34,.95),rgba(2,39,34,.65)),url("https://images.squarespace-cdn.com/content/v1/69691e9b429b8764cf5b0f29/0e6e9298-517a-4983-99cc-a4dee4eb4b84/white-suv-winding-road-kigali-rwanda-terraced-hills-sunset.jpg") center/cover;color:#fff}
+.bottom-grid{min-height:95px;display:grid;grid-template-columns:1.6fr 1fr .55fr;align-items:center;gap:30px}
+.bottom-grid>div:first-child{display:flex;align-items:center;gap:18px}
+.mountain-logo{font-size:48px;color:var(--gold2)}
+.bottom-grid h3{margin:0 0 7px;font-size:15px}
+.bottom-grid p{font-size:10px;margin:0;color:#dbe4e1}
+.bottom-location{display:flex;gap:13px}
+.bottom-location>span{color:var(--gold2);font-size:22px}
+.twende{text-align:right;font:italic 18px "Playfair Display"}
+.twende small{display:block;margin-top:7px;font-style:normal}
+footer{text-align:center;padding:13px;background:#04221f;color:#c8d5d2;font-size:10px}
+.sr-only{display:none}
+
+@media(max-width:1050px){
+  .main-nav{gap:16px}.nav-actions>span:not(.nav-icon){display:none}
+  .fleet-layout{grid-template-columns:1fr}.cars-grid{grid-template-columns:repeat(5,1fr)}.fleet-promo{min-height:180px}
+  .trust-grid{grid-template-columns:repeat(3,1fr);gap:20px}.trust-item{border-right:0}
+  .mini-landscape{display:none}
+}
+@media(max-width:760px){
+  .nav{height:66px}.main-nav{display:none}.brand{min-width:auto}.nav-actions{margin-left:auto}
+  .hero{height:auto;min-height:660px}.hero-content{padding-top:105px;display:block}.hero h1{font-size:42px}
+  .hero-quote{display:none}.booking-wrap{bottom:18px;width:92%}
+  .booking-bar{grid-template-columns:1fr 1fr;padding:8px}.booking-field:first-child,.search-btn{grid-column:span 2}
+  .trust-strip{padding-top:35px}.trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item{padding:8px}
+  .fleet-section{padding-top:30px}.fleet-layout{display:block}.fleet-intro{margin-bottom:20px}
+  .cars-grid{grid-template-columns:1fr 1fr}.car-card img{height:145px}.fleet-promo{margin-top:10px;min-height:220px}
+  .bottom-grid{grid-template-columns:1fr;padding:20px 0}.twende{text-align:left}
+}
+@media(max-width:480px){
+  .nav-actions .gold-btn{display:none}.hero{min-height:720px}.booking-bar{grid-template-columns:1fr}.booking-field:first-child,.search-btn{grid-column:auto}
+  .trust-grid{grid-template-columns:1fr}.cars-grid{grid-template-columns:1fr}
+}

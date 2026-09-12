@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rwanda Ride — Car Rental & Booking</title>
+  <meta name="description" content="Rwanda Ride car rental and booking website." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">⌁</span>
+      <span>
+        <strong>RWANDA <b>RIDE</b></strong>
+        <small>Drive · Explore · Experience</small>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#fleet">Cars</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About Us</a>
+      <a href="#locations">Locations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span class="nav-icon">⌕</span>
+      <span class="nav-icon">◎</span>
+      <span>EN</span>
+      <span class="user-icon">♙</span>
+      <button class="gold-btn small" onclick="window.location.href='login.html'">Sign In / Register</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <div class="eyebrow"><span></span> RWANDA CAR RENTAL & BOOKING</div>
+      <h1>Explore Rwanda<br><em>Your Way</em></h1>
+      <p>Reliable cars. Unforgettable journeys.<br>From city rides to safaris, we've got you covered.</p>
+
+      <blockquote>
+        <span>“</span>
+        <strong>Rwanda is not just a destination,<br>it’s a feeling.”</strong>
+        <small>— Visit Rwanda</small>
+      </blockquote>
+    </div>
+
+    <div class="hero-quote">
+      <span>“</span>
+      <strong>Visit Rwanda<br>and discover<br>a land of a<br>thousand hills.</strong>
+      <small>— Rwanda Tourism</small>
+    </div>
+  </div>
+
+  <div class="booking-wrap container">
+    <form class="booking-bar" id="bookingForm">
+      <label class="booking-field">
+        <span class="field-icon">▣</span>
+        <span><small>Pick-up Location</small><b>Kigali International Airport</b></span>
+        <i>⌄</i>
+      </label>
+      <label class="booking-field">
+        <span class="field-icon">▦</span>
+        <span><small>Pick-up Date</small><b><input type="date" id="pickupDate"></b></span>
+        <i>›</i>
+      </label>
+      <label class="booking-field">
+        <span class="field-icon">▦</span>
+        <span><small>Drop-off Date</small><b><input type="date" id="dropoffDate"></b></span>
+        <i>›</i>
+      </label>
+      <label class="booking-field">
+        <span class="field-icon">▣</span>
+        <span><small>Car Type</small><b><select><option>All Types</option><option>Economy</option><option>SUV</option><option>Van</option><option>4x4</option><option>Luxury</option></select></b></span>
+        <i>⌄</i>
+      </label>
+      <button class="search-btn" type="submit">⌕ &nbsp; Search Cars</button>
+    </form>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item"><span>♢</span><div><b>Safe & Reliable</b><small>Well-maintained cars<br>and insured trips.</small></div></div>
+    <div class="trust-item"><span>◉</span><div><b>24/7 Support</b><small>We're here for you<br>anytime, anywhere.</small></div></div>
+    <div class="trust-item"><span>♧</span><div><b>Nationwide Coverage</b><small>Pick up and drop off<br>across Rwanda.</small></div></div>
+    <div class="trust-item"><span>☆</span><div><b>Great Prices</b><small>Quality service<br>at fair rates.</small></div></div>
+    <div class="trust-item"><span>♧</span><div><b>Eco-Friendly Options</b><small>Drive green,<br>protect our hills.</small></div></div>
+    <div class="mini-landscape">
+      <div><b>Rwanda</b><span>A small country with<br>big journeys</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="fleet" class="fleet-section">
+  <div class="container fleet-layout">
+    <div class="fleet-intro">
+      <div class="eyebrow dark"><span></span> OUR FLEET</div>
+      <h2>Choose Your Ride</h2>
+      <p>From city cars to SUVs, 4x4s, vans and luxury vehicles — find the perfect car for your journey in Rwanda.</p>
+      <a href="login.html" class="gold-btn">View All Cars <span>→</span></a>
+      <blockquote>“ In Rwanda, every road<br>leads to a new story. ”</blockquote>
+      <div class="mountain-line">⌁⌁⌁</div>
+    </div>
+
+    <div class="cars-grid" id="cars">
+      <article class="car-card">
+        <img src="https://kigalicarselfdrive.com/wp-content/uploads/2025/01/landcruiser.jpg" onerror="this.src='https://kigalicarselfdrive.com/wp-content/uploads/2025/01/RAV4.jpg'" alt="Economy car in Rwanda">
+        <div class="card-body"><h3>Economy Cars</h3><p>Perfect for city trips & business.</p><div><b>From $25 / day</b><span>→</span></div></div>
+      </article>
+
+      <article class="car-card">
+        <img src="https://reycarrentalskigali.com/storage/Blogs/Thumbnails/01KGKRC3EAAGEBE6QVWRSPSK4P.jpg" alt="SUV fleet in Kigali">
+        <div class="card-body"><h3>SUVs</h3><p>Comfort for family & group travel.</p><div><b>From $60 / day</b><span>→</span></div></div>
+      </article>
+
+      <article class="car-card">
+        <img src="https://res.cloudinary.com/nccharles/image/upload/v1735854417/car_kigali_rental_1735853888403_cb846b21b0.jpg" alt="Toyota Hiace van in Kigali">
+        <div class="card-body"><h3>Vans & Minibuses</h3><p>For groups and tours.</p><div><b>From $80 / day</b><span>→</span></div></div>
+      </article>
+
+      <article class="car-card">
+        <img src="https://reycarrentalskigali.com/storage/Blogs/Attachment/h716pHsmiYcCZ5a10PS99c0WAAPY88sVR3U2hv1M.jpg" alt="Safari 4x4 in Rwanda">
+        <div class="card-body"><h3>4x4 & Safari Cars</h3><p>Explore beyond the roads.</p><div><b>From $90 / day</b><span>→</span></div></div>
+      </article>
+
+      <article class="car-card">
+        <img src="https://www.blackbenzservices.com/pictures/sclass9.jpeg" alt="Luxury Mercedes in Rwanda">
+        <div class="card-body"><h3>Luxury Cars</h3><p>Travel in style and comfort.</p><div><b>From $120 / day</b><span>→</span></div></div>
+      </article>
+    </div>
+
+    <aside class="fleet-promo">
+      <div>
+        <span>“ Discover Rwanda<br>with comfort,<br>style and freedom. ”</span>
+        <small>— Rwanda Ride</small>
+        <button class="gold-btn" onclick="window.location.href='login.html'">Book Now <span>→</span></button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="packages" class="dark-bottom">
+  <div class="container bottom-grid">
+    <div>
+      <div class="mountain-logo">⌁</div>
+      <div><h3>More Than Just a Ride</h3><p>Car Rentals &nbsp; | &nbsp; Airport Transfers &nbsp; | &nbsp; Guided Tours &nbsp; | &nbsp; Corporate Travel &nbsp; | &nbsp; Chauffeur Services</p></div>
+    </div>
+    <div class="bottom-location">
+      <span>●</span><div><h3>Rwanda</h3><p>Safe Roads. Beautiful Destinations. Unforgettable Memories.</p></div>
+    </div>
+    <div class="twende">“Twende Rwanda<br>— Hamwe.”<small>🇷🇼</small></div>
+  </div>
+</section>
+
+<section id="about" class="sr-only">About Rwanda Ride</section>
+<section id="locations" class="sr-only">Rwanda locations</section>
+<section id="contact" class="sr-only">Contact Rwanda Ride</section>
+</main>
+
+<footer>© <span id="year"></span> Rwanda Ride. Drive · Explore · Experience.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

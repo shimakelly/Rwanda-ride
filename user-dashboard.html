@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rwanda Ride — Customer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="customer-dashboard-page">
+  <div class="simple-dashboard">
+    <aside class="mini-side">
+      <div class="mini-logo">RWANDA <b>RIDE</b></div>
+      <a class="on" href="#top">⌂ Dashboard</a>
+      <a href="#bookings">▣ My Bookings</a>
+      <a href="#vehicles">🚗 Browse Cars</a>
+      <a href="#reviews">★ Reviews</a>
+      <a href="#settings">⚙ Settings</a>
+      <a onclick="location.href='index.html'">↪ Sign Out</a>
+    </aside>
+
+    <main class="customer-main">
+      <header>
+        <span>Customer Dashboard</span>
+        <button onclick="location.href='index.html'">Sign out</button>
+      </header>
+
+      <section class="customer-hero">
+        <div>
+          <small>WELCOME BACK</small>
+          <h1>Find your next ride.</h1>
+          <p>Book a reliable car and explore Rwanda your way.</p>
+          <button class="gold" type="button" onclick="document.getElementById('vehicle-list').scrollIntoView({behavior:'smooth'});">Search Cars →</button>
+        </div>
+      </section>
+
+      <div class="customer-grid">
+        <div class="white-card full-width">
+          <div class="card-title">
+            <h2>Quick Search</h2>
+          </div>
+          <form id="customer-search-form" class="inline-form">
+            <label>
+              Pick-up location
+              <select id="customer-location">
+                <option value="All">All locations</option>
+                <option>Kigali International Airport</option>
+                <option>Kigali City</option>
+                <option>Rubavu</option>
+                <option>Huye</option>
+              </select>
+            </label>
+            <label>
+              Car type
+              <select id="customer-type">
+                <option value="All">All Types</option>
+                <option>SUV</option>
+                <option>4x4</option>
+                <option>Van</option>
+                <option>Luxury</option>
+              </select>
+            </label>
+            <button class="gold" type="submit">Find Cars</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="customer-grid">
+        <div class="white-card" id="vehicles">
+          <h2>Available Vehicles</h2>
+          <div id="vehicle-list" class="vehicle-grid"></div>
+        </div>
+
+        <div class="white-card" id="bookings">
+          <h2>My Bookings</h2>
+          <div id="customer-bookings" class="list-stack"></div>
+        </div>
+      </div>
+
+      <div class="customer-grid">
+        <div class="white-card" id="reviews">
+          <h2>Reviews</h2>
+          <div id="customer-reviews" class="list-stack"></div>
+        </div>
+
+        <div class="white-card" id="settings">
+          <h2>Settings</h2>
+          <form data-settings-form="customer" class="card-form">
+            <div class="form-grid">
+              <label>Preferred language<select>
+                <option>English</option>
+                <option>Kinyarwanda</option>
+                <option>French</option>
+              </select></label>
+              <label>Booking notifications<select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+              </select></label>
+            </div>
+            <div class="form-actions">
+              <button class="primary small" type="submit">Save Settings</button>
+            </div>
+            <div class="settings-feedback" style="margin-top:10px;"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

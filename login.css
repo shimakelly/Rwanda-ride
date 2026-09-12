@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root{--green:#00332e;--green2:#075048;--gold:#dba33b;--bg:#f4f7f6;--line:#e3e9e7;--text:#203334;--muted:#7b8889;--danger:#bf3d35;--success:#1f7a5c}
+*{box-sizing:border-box}body{margin:0;font-family:"DM Sans",Arial;color:var(--text);background:var(--bg)}button,input,select{font:inherit}
+a{color:inherit}
+.hidden{display:none!important}
+
+.login-shell{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr}
+.login-visual{position:relative;color:#fff;padding:34px 6%;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(90deg,rgba(0,43,38,.97),rgba(0,43,38,.45)),url("https://images.squarespace-cdn.com/content/v1/69691e9b429b8764cf5b0f29/0e6e9298-517a-4983-99cc-a4dee4eb4b84/white-suv-winding-road-kigali-rwanda-terraced-hills-sunset.jpg") center/cover}
+.brand{display:flex;align-items:center;gap:10px}.mountain{font-size:40px}.brand b,.mobile-brand b{font-size:20px;letter-spacing:1px}.brand i,.mobile-brand i{color:#edbb5b;font-style:normal}.brand small{display:block;font-size:9px;letter-spacing:1px}
+.visual-copy{max-width:520px}.visual-copy>span{font-size:10px;letter-spacing:2px}.visual-copy h1{font:italic 60px/1 "Playfair Display";margin:15px 0}.visual-copy em{color:#efc164}.visual-copy p{font-size:15px;color:#d8e5e1}.visual-bottom{font-size:12px;color:#dbe7e4}
+.login-card{width:min(480px,88%);align-self:center;justify-self:center}.mobile-brand{display:none;color:var(--green);margin-bottom:30px}.login-card h2{font-size:30px;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 25px;font-size:13px}
+.role-tabs{display:grid;grid-template-columns:repeat(3,1fr);background:#eaf0ee;border-radius:7px;padding:4px;margin-bottom:22px}.role{border:0;background:transparent;padding:10px 5px;border-radius:5px;color:#63706f;font-size:11px;cursor:pointer}.role.active{background:#fff;color:var(--green);font-weight:700;box-shadow:0 2px 7px #1232}
+form label{display:block;font-size:11px;font-weight:600;margin-bottom:15px}input[type=email],input[type=password],input[type=text],input[type=number],input[type=date],select{width:100%;height:45px;border:1px solid var(--line);border-radius:6px;margin-top:7px;padding:0 13px;background:#fff;outline:none;font-size:12px}input:focus,select:focus{border-color:#87aa9e}.password{position:relative}.password input{padding-right:55px}.password button{position:absolute;right:8px;top:15px;border:0;background:none;color:#16765d;font-size:9px;cursor:pointer}.form-row{display:flex;justify-content:space-between;align-items:center;font-size:10px;margin:2px 0 18px}.form-row a,.signup a{color:#14775e;text-decoration:none}.remember{display:flex;align-items:center;gap:5px!important;margin:0!important;font-weight:400!important}.primary{width:100%;height:46px;border:0;border-radius:6px;background:linear-gradient(135deg,#dba63f,#c78e29);color:#fff;font-weight:700;cursor:pointer}.demo{margin-top:20px;padding:13px;background:#eef7f2;border:1px solid #d9e9e2;border-radius:7px;font-size:10px}.demo b{font-size:11px}.demo p{display:inline-block;margin:7px 15px 0 0;color:#536363}.demo small{display:block;margin-top:7px;color:#899595}.signup{text-align:center;color:#798585;font-size:11px;margin-top:24px}
+
+@media(max-width:500px){
+  .login-shell{grid-template-columns:1fr}.login-visual{display:none}.mobile-brand{display:block}.login-card{padding:35px 0}.role-tabs{grid-template-columns:1fr 1fr 1fr}
+}

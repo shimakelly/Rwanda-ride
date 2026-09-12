@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rwanda Ride — Super Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="admin-dashboard-page">
+  <div class="admin-page">
+    <aside class="admin-side">
+      <div class="mini-logo">RWANDA <b>RIDE</b></div>
+      <div class="admin-label">SUPER ADMIN</div>
+      <a class="on" href="#top">⌂ Overview</a>
+      <a href="#users">♙ All Users</a>
+      <a href="#owners">▣ Business Owners</a>
+      <a href="#businesses">▦ Businesses</a>
+      <a href="#bookings">▤ All Bookings</a>
+      <a href="#payments">💳 Payments</a>
+      <a href="#complaints">⚠ Complaints</a>
+      <a href="#reports">📊 Reports</a>
+      <a href="#settings">⚙ System Settings</a>
+      <a onclick="location.href='index.html'">↪ Sign Out</a>
+    </aside>
+
+    <main class="admin-main">
+      <header>
+        <div>
+          <h1>Platform Administration</h1>
+          <small>Control users, business owners and Rwanda Ride operations.</small>
+        </div>
+        <div class="admin-user">Administrator &nbsp; <b id="admin-user-name">Admin</b> 👤</div>
+      </header>
+
+      <section class="admin-content">
+        <div class="super-banner">
+          <div>
+            <small>SYSTEM OVERVIEW</small>
+            <h2>Good Morning, Admin! 👋</h2>
+            <p>Monitor the complete Rwanda Ride platform from one place.</p>
+          </div>
+          <button onclick="location.href='owner-dashboard.html'">Open Owner Dashboard →</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><small>Total Users</small><strong id="stat-admin-users">0</strong><em id="trend-admin-users">↗ 0%</em></div>
+          <div class="stat"><small>Business Owners</small><strong id="stat-admin-owners">0</strong><em id="trend-admin-owners">↗ 0%</em></div>
+          <div class="stat"><small>Active Businesses</small><strong id="stat-admin-businesses">0</strong><em id="trend-admin-businesses">↗ 0%</em></div>
+          <div class="stat"><small>Total Bookings</small><strong id="stat-admin-bookings">0</strong><em id="trend-admin-bookings">↗ 0%</em></div>
+        </div>
+
+        <div class="admin-grid">
+          <div class="white-card" id="users">
+            <div class="card-title">
+              <h2>Users</h2>
+              <button class="gold" type="button" data-open-form="user-form">+ Add User</button>
+            </div>
+
+            <form id="user-form" class="card-form hidden">
+              <input type="hidden" id="user-id">
+              <div class="form-grid">
+                <label>Name<input id="user-name" required></label>
+                <label>Email<input id="user-email" type="email" required></label>
+                <label>Role<select id="user-role">
+                  <option>Customer</option>
+                  <option>Business Owner</option>
+                  <option>Admin</option>
+                </select></label>
+                <label>Status<select id="user-status">
+                  <option>Active</option>
+                  <option>Inactive</option>
+                </select></label>
+              </div>
+              <div class="form-actions">
+                <button class="primary small" type="submit">Save User</button>
+                <button class="outline small" type="button" data-close-form="user-form">Cancel</button>
+              </div>
+            </form>
+
+            <div id="admin-users" class="table-wrap"></div>
+          </div>
+
+          <div class="white-card" id="owners">
+            <h2>Business Owners</h2>
+            <div id="admin-owners" class="table-wrap"></div>
+          </div>
+
+          <div class="white-card" id="businesses">
+            <h2>Businesses</h2>
+            <div id="admin-businesses" class="table-wrap"></div>
+          </div>
+
+          <div class="white-card" id="bookings">
+            <div class="card-title">
+              <h2>Bookings</h2>
+              <button class="gold" type="button" data-open-form="admin-booking-form">+ Add Booking</button>
+            </div>
+
+            <form id="admin-booking-form" class="card-form hidden">
+              <input type="hidden" id="admin-booking-id">
+              <div class="form-grid">
+                <label>Customer name<input id="admin-booking-customer-name" required></label>
+                <label>Vehicle name<input id="admin-booking-vehicle-name" required></label>
+                <label>Booking date<input id="admin-booking-date" type="date" required></label>
+                <label>Status<select id="admin-booking-status">
+                  <option>Pending</option>
+                  <option>Confirmed</option>
+                  <option>Completed</option>
+                  <option>Cancelled</option>
+                </select></label>
+                <label>Total amount<input id="admin-booking-total" type="number" min="0" step="0.01" required></label>
+              </div>
+              <div class="form-actions">
+                <button class="primary small" type="submit">Save Booking</button>
+                <button class="outline small" type="button" data-close-form="admin-booking-form">Cancel</button>
+              </div>
+            </form>
+
+            <div id="admin-bookings" class="table-wrap"></div>
+          </div>
+
+          <div class="white-card" id="payments">
+            <h2>Payments</h2>
+            <div id="admin-payments" class="list-stack"></div>
+          </div>
+
+          <div class="white-card" id="complaints">
+            <h2>Complaints</h2>
+            <div id="admin-complaints" class="list-stack"></div>
+          </div>
+
+          <div class="white-card" id="reports">
+            <h2>Reports</h2>
+            <div id="admin-reports" class="stats report-grid"></div>
+          </div>
+
+          <div class="white-card" id="settings">
+            <h2>System Settings</h2>
+            <form data-settings-form="admin" class="card-form">
+              <div class="form-grid">
+                <label>Platform name<input type="text" value="Rwanda Ride"></label>
+                <label>Maintenance mode<select>
+                  <option>Off</option>
+                  <option>On</option>
+                </select></label>
+                <label>Audit logging<select>
+                  <option>Enabled</option>
+                  <option>Disabled</option>
+                </select></label>
+              </div>
+              <div class="form-actions">
+                <button class="primary small" type="submit">Save Settings</button>
+              </div>
+              <div class="settings-feedback" style="margin-top:10px;"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

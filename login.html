@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rwanda Ride — Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-page">
+  <div class="login-shell">
+    <div class="login-visual">
+      <div class="brand"><span class="mountain">⌁</span><div><b>RWANDA <i>RIDE</i></b><small>Drive · Explore · Experience</small></div></div>
+      <div class="visual-copy">
+        <span>RWANDA CAR RENTAL & BOOKING</span>
+        <h1>Drive Rwanda.<br><em>Your way.</em></h1>
+        <p>One platform for customers, business owners and administrators.</p>
+      </div>
+      <div class="visual-bottom">🇷🇼 &nbsp; Together we move Rwanda forward.</div>
+    </div>
+
+    <div class="login-card">
+      <div class="mobile-brand"><b>RWANDA <i>RIDE</i></b></div>
+      <h2>Welcome back</h2>
+      <p class="sub">Sign in to continue to your dashboard.</p>
+
+      <div class="role-tabs">
+        <button class="role active" data-role="user" type="button">Customer</button>
+        <button class="role" data-role="owner" type="button">Business Owner</button>
+        <button class="role" data-role="admin" type="button">Admin</button>
+      </div>
+
+      <form id="loginForm">
+        <label>Email address<input id="email" type="email" placeholder="you@example.com" required></label>
+        <label>Password<div class="password"><input id="password" type="password" placeholder="Enter your password" required><button type="button" id="show">Show</button></div></label>
+        <div class="form-row"><label class="remember"><input type="checkbox"> Remember me</label><a href="#" id="forgotPassword">Forgot password?</a></div>
+        <div id="auth-message" style="display:none; margin: 0 0 14px; padding: 10px 12px; border-radius: 10px; background: #eaf7f0; color: #1f5d3f; border: 1px solid #99d9b7; font-size: 0.9rem;"></div>
+        <button class="primary" type="submit">Sign In →</button>
+      </form>
+
+      <div id="authModal" style="display:none; position:fixed; inset:0; background:rgba(16,24,40,0.55); align-items:center; justify-content:center; z-index:1000;">
+        <div style="background:#fff; width:min(420px, calc(100vw - 32px)); border-radius:16px; padding:24px; box-shadow:0 20px 50px rgba(15,23,42,0.25);">
+          <h3 id="authModalTitle" style="margin:0 0 8px; font-size:1.3rem;">Create an account</h3>
+          <p id="authModalDescription" style="margin:0 0 18px; color:#4b5563; line-height:1.5;">Choose an email and password for your new account.</p>
+          <input id="authModalInput" type="email" placeholder="you@example.com" style="width:100%; box-sizing:border-box; padding:12px 14px; border:1px solid #d1d5db; border-radius:10px; font-size:1rem; margin-bottom:16px;">
+          <input id="authModalPassword" type="password" placeholder="Create a password" style="display:none; width:100%; box-sizing:border-box; padding:12px 14px; border:1px solid #d1d5db; border-radius:10px; font-size:1rem; margin-bottom:16px;">
+          <input id="authModalOtp" type="text" placeholder="Enter OTP" style="display:none; width:100%; box-sizing:border-box; padding:12px 14px; border:1px solid #d1d5db; border-radius:10px; font-size:1rem; margin-bottom:16px;">
+          <div style="display:flex; justify-content:flex-end; gap:10px;">
+            <button type="button" id="authModalCancel" style="padding:10px 14px; border-radius:10px; border:1px solid #d1d5db; background:#fff; cursor:pointer;">Cancel</button>
+            <button type="button" id="authModalSubmit" style="padding:10px 14px; border-radius:10px; border:none; background:#1e293b; color:#fff; cursor:pointer;">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo">
+        <b>Demo accounts</b>
+        <p>Customer: customer@rwandaride.com / customer123</p>
+        <p>Owner: owner@rwandaride.com / owner123</p>
+        <p>Admin: admin@rwandaride.com / admin123</p>
+      </div>
+      <p class="signup">New to Rwanda Ride? <a href="#" id="createAccount">Create an account</a></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
